@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Something For You ❤️</title>
+<style>
+*{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffd6e7,#fff0f6);display:flex;justify-content:center;align-items:center;overflow-x:hidden}.card{background:white;width:92%;max-width:540px;padding:38px 25px;border-radius:25px;text-align:center;box-shadow:0 10px 35px rgba(0,0,0,.15);margin:25px 0}h1{color:#e75480}p{font-size:18px;color:#555;line-height:1.65}button{border:0;padding:13px 24px;margin:9px;border-radius:25px;font-size:16px;cursor:pointer;background:#e75480;color:white;transition:.2s}button:hover{transform:scale(1.06);background:#d63f6b}.choice,.envelope{display:block;width:88%;max-width:410px;margin:12px auto}.hidden{display:none}.heart{font-size:55px;animation:beat 1s infinite}.small{font-size:14px;color:#999}.result{font-size:30px;color:#e75480;font-weight:bold}@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+</style>
+</head>
+<body><div class="card">
+
+<div id="screen1"><div class="heart">❤️</div><h1>Hey You 👀</h1><p>I have something important to tell you...<br><br>But you're going to have to play along first. 😌</p><button onclick="nextScreen(2)">I'm Curious 👀</button></div>
+
+<div id="screen2" class="hidden"><h1>🧠 How Well Do You Know Aachal?</h1><p>You've been with her for <b>3 years and 7 months</b>.<br><br>You were even best friends before all this happened. 🫶<br><br>So... let's see how well you actually know her. 😏</p><button onclick="nextScreen(3)">START QUIZ 💕</button></div>
+
+<div id="screen3" class="hidden"><h1>Question 1 🍽️</h1><p><b>Which cuisine is Aachal's favorite?</b></p><button class="choice" onclick="answer(1,false)">🍝 Italian</button><button class="choice" onclick="answer(1,true)">🇮🇳 Indian</button><button class="choice" onclick="answer(1,false)">🍜 Chinese</button><button class="choice" onclick="answer(1,false)">🍣 Japanese</button></div>
+
+<div id="screen4" class="hidden"><h1>Question 2 😂</h1><p><b>What is something that annoys Aachal about you?</b></p><button class="choice" onclick="answer(2,false)">📱 Taking too long to reply</button><button class="choice" onclick="answer(2,false)">😴 Sleeping too much</button><button class="choice" onclick="answer(2,true)">🧼 Not cleaning your ears 😭</button><button class="choice" onclick="answer(2,false)">🗣️ Talking too much</button></div>
+
+<div id="screen5" class="hidden"><h1>Question 3 ❤️</h1><p><b>What does Aachal love most about you?</b></p><button class="choice" onclick="answer(3,false)">😊 Your smile</button><button class="choice" onclick="answer(3,false)">🧠 Your personality</button><button class="choice" onclick="answer(3,false)">🫶 The way you treat her</button><button class="choice" onclick="answer(3,true)">❤️ The whole you</button></div>
+
+<div id="screen6" class="hidden"><h1>Question 4 👀</h1><p><b>What were you two before you started dating?</b></p><button class="choice" onclick="answer(4,false)">🤍 Complete strangers</button><button class="choice" onclick="answer(4,true)">🤝 Best friends</button><button class="choice" onclick="answer(4,false)">😂 Two people who barely talked</button><button class="choice" onclick="answer(4,false)">😌 Just acquaintances</button></div>
+
+<div id="screen7" class="hidden"><h1>🏆 RESULTS</h1><p>Analyzing your answers...</p><p>🔍 Checking relationship knowledge...</p><p>❤️ Checking how well you know Aachal...</p><div class="result" id="score"></div><p id="resultText"></p><button onclick="nextScreen(8)">CONTINUE 💌</button></div>
+
+<div id="screen8" class="hidden"><h1>💌 Open When...</h1><p>There are a few little messages here for you.</p><p class="small">You can open them whenever you need them. ❤️</p><button class="envelope" onclick="nextScreen(9)">🌧️ Open when you're having a bad day</button><button class="envelope" onclick="nextScreen(10)">🌀 Open when you're overthinking about me</button><button class="envelope" onclick="nextScreen(11)">🫶 Open when you need reassurance</button><button class="envelope" onclick="nextScreen(12)">🔐 Open this LAST — Secret Message</button></div>
+
+<div id="screen9" class="hidden"><div class="heart">🌧️</div><h1>For Your Bad Day ❤️</h1><p>Hey Vishaaa ❤️<br><br>I know today might not be going the way you wanted it to, but just remember that one bad day doesn't mean everything is bad.<br><br>Take a breath, stop thinking for a while, and remember that <b>I'm here.</b> You don't always have to handle everything alone, okay? 🫶<br><br>And if nothing else works... come talk to me. I'll annoy you until you smile. 😂❤️</p><button onclick="nextScreen(8)">BACK TO LETTERS 💌</button></div>
+
+<div id="screen10" class="hidden"><div class="heart">🌀</div><h1>Stop Overthinking 😭❤️</h1><p>Vishaaa, stop overthinking. 😭❤️<br><br>Whatever you're thinking right now, there's probably a 90% chance you've made it 10 times bigger in your head. 😂<br><br>You don't need to question what I feel about you. If something is bothering me, I'll tell you.<br><br>So breathe, idiot. 😌<br><br><b>You're loved. You're important to me. And we're okay. ❤️</b></p><button onclick="nextScreen(8)">BACK TO LETTERS 💌</button></div>
+
+<div id="screen11" class="hidden"><div class="heart">🫶</div><h1>In Case You Need Reassurance ❤️</h1><p>Hey you ❤️<br><br>In case you forgot... <b>I'm still here.</b><br><br>I choose you, I care about you, and I don't take what we have for granted. 🥹<br><br>We've had our stupid fights, our stupid arguments, our stupid moments 😂 — but through all of that, you're still the person I want beside me.<br><br>So whenever you need reassurance, come back and read this:<br><br><b>Aachal isn't going anywhere. ❤️</b></p><button onclick="nextScreen(8)">BACK TO LETTERS 💌</button></div>
+
+<div id="screen12" class="hidden"><div class="heart">🔐</div><h1>Secret Message ❤️</h1><p>Okay Vishaaa... you finally opened the last one. 👀❤️<br><br>It's actually crazy to think that before we were <i>us</i>, we were just best friends.<br><br>We spent 1–2 years being friends, talking, annoying each other, and probably having absolutely no idea where we'd end up. 😂<br><br>And somehow, <b>3 years and 7 months later</b>, here we are.<br><br>I don't know what the future looks like, and I don't know where life will take us...<br><br>But I'm really, really glad that out of all the people I could have met, <b>I met you.</b> 🥹❤️<br><br>You aren't just my boyfriend.<br><br>You're someone who became a huge part of my life without me even realizing it.<br><br>So yeah, Vishaaa...<br><br><b>I love you. The whole you. ❤️</b><br><br>— Aachal 🫶</p><button onclick="nextScreen(13)">ONE LAST THING 😂</button></div>
+
+<div id="screen13" class="hidden"><div class="heart">🥰</div><h1>MISSION COMPLETE 🎉</h1><p>You may now return to your regularly scheduled relationship. 😂❤️<br><br><b>Go drink some water, Vishaaa. 🫶</b><br><br>And...<br><br><b>Don't forget to clean your ears. 🧼😭</b></p></div>
+
+</div>
+<script>
+let score=0;
+function nextScreen(n){document.querySelectorAll(".card > div").forEach(s=>s.classList.add("hidden"));document.getElementById("screen"+n).classList.remove("hidden");window.scrollTo(0,0)}
+function answer(q,c){if(c)score++;let next=q+3;nextScreen(next);if(q===4){document.getElementById("score").textContent=score+"/4";document.getElementById("resultText").innerHTML=score===4?"Okay Vishaaa... <b>you actually know me. 🙄❤️</b>":score===3?"Not bad... but Aachal may have to conduct further investigation. 😂❤️":score===2?"Hmmmm... 3 years and 7 months and THIS is what I get? 😭😂":"We need to have a serious conversation, Vishaaa. 😂❤️"}}
+</script></body></html>
